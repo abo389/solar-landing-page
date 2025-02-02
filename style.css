@@ -16,6 +16,12 @@
   -khtml-box-sizing: border-box;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .btn {
   display: block;
   padding: 0.5rem 1.5rem;
@@ -41,13 +47,20 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+/* ############# */
+/* start header */
+/* ############# */
+
 header {
   background-color: var(--primary-color);
-  padding: 1rem 2rem;
+  padding: 1rem 0;
+  color: white;
+}
+
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
 }
 
 header .nav-links {
@@ -87,6 +100,76 @@ header .burger .links a:last-child h2 {
   background-color: red;
 }
 
+/* ############# */
+/* end header */
+/* ############# */
+
+
+/* ############# */
+/* start hero */
+/* ############# */
+
+.hero {
+  position: relative;
+  height: 60vh;
+  color: white;
+  background-image: url('images/hero.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* .hero img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+} */
+
+.hero .hero-text {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: start;
+  align-content: center;
+  width: 50%;
+}
+
+.hero .hero-text .pro progress {
+  margin: 0 1rem;
+}
+
+.hero .hero-text h1 {
+  font-size: 3rem;
+  margin-top: 3rem;
+}
+
+.hero .hero-text p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.hero .hero-text .box {
+  display: flex;
+  gap: 1rem;
+}
+.hero .hero-text .box a {
+  font-size: .7rem;
+  background-color: var(--primary-color);
+  padding: .6rem 1rem;
+  border-radius: 30px;
+  letter-spacing: 1px;
+}
+
+.hero .hero-text .box a:last-child {
+  background-color: var(--secondary-color);
+  color: black;
+}
+
 @media (max-width: 900px) {
   header .burger {
     display: block;
@@ -94,5 +177,24 @@ header .burger .links a:last-child h2 {
   header nav,
   header .contact {
     display: none;
+  }
+  .hero .hero-text {
+    width: 80%;
+    /* padding: 0 1rem; */
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+  .hero .hero-text {
+    width: 100%;
+  }
+  .hero .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero .hero-text .box {
+    flex-direction: column;
   }
 }
