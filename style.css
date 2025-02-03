@@ -380,6 +380,53 @@ header .burger .links a:last-child h2 {
   margin-left: .5rem;
 }
 
+/* ############# */
+/* start repairs */
+/* ############# */
+
+.repairs {
+  background-image: url('images/repairs.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.repairs .container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.repairs .container .text {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 85%;
+  padding: 2rem;
+}
+
+.repairs .container .text h2 {
+  font-weight: 500;
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+.repairs .container .text p {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 2rem;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
 @media (max-width: 900px) {
   header .burger {
     display: block;
@@ -397,6 +444,15 @@ header .burger .links a:last-child h2 {
   }
   .power .container .text {
     width: 80%;
+  }
+  .repairs .container .text {
+    width: 95%;
+  }
+  .repairs .container .text h2 {
+    font-size: 2.5rem;
+  }
+  .repairs .container .text p {
+    font-size: 1rem;
   }
 }
 
@@ -422,5 +478,8 @@ header .burger .links a:last-child h2 {
   }
   .power .container .text{
     width: 100%;
+  }
+    .repairs .container .text h2 {
+    font-size: 1.6rem;
   }
 }
