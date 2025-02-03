@@ -258,6 +258,128 @@ header .burger .links a:last-child h2 {
   margin-bottom: 1rem;
 }
 
+/* ############# */
+/* start power */
+/* ############# */
+
+.power {
+  background-image: url('images/power.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  height: 550px;
+}
+
+.power .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.power .container .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  width: 60%;
+  height: 100%;
+  /* padding: 5rem 0; */
+}
+
+.power .container .text h2 {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.power .container .text p {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+
+.power .container .text a {
+  font-size: 1rem;
+  padding: .5rem 1.5rem;
+  border-radius: 30px;
+  background-color: var(--secondary-color);
+  color: black;
+  width: fit-content;
+}
+
+/* ############# */
+/* start solar */
+/* ############# */
+
+.solar {
+  background-color: #F5F5F5;
+}
+
+.solar .container .title {
+  text-align: center;
+}
+
+.solar .container .title h2 {
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+.solar .container .title p {
+  font-size: 1rem;
+  color: #475467;
+  line-height: 1.5rem;
+  width: 80%;
+  margin: auto;
+}
+
+.solar .container .card-container {
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.solar .container .card-container .card {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.solar .container .card-container .card > img {
+  width: 100%;
+}
+
+.solar .container .card-container .card .text {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.solar .container .card-container .card .text h4 {
+  font-size: 1.3rem;
+}
+
+.solar .container .card-container .card .text p {
+  font-size: .9rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: calc(1.2em * 3);
+}
+
+.solar .container .card-container .card .text a {
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+
+.solar .container .card-container .card .text a img {
+  margin-left: .5rem;
+}
+
 @media (max-width: 900px) {
   header .burger {
     display: block;
@@ -272,6 +394,9 @@ header .burger .links a:last-child h2 {
   }
   .installers .container {
     flex-direction: column;
+  }
+  .power .container .text {
+    width: 80%;
   }
 }
 
@@ -294,5 +419,8 @@ header .burger .links a:last-child h2 {
   }
   .installers .container .text ol li {
     font-size: 1rem;
+  }
+  .power .container .text{
+    width: 100%;
   }
 }
