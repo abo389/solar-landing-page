@@ -479,6 +479,7 @@ header .burger .links a:last-child h2 {
   background-color: #3CAB9026;
   padding: 1.2rem 0;
   text-align: center;
+  border-radius: 20px;
 }
 
 .energy .container .card-container .card .img img {
@@ -603,7 +604,6 @@ header .burger .links a:last-child h2 {
   height: 10px;
   border-radius: 50%;
   background-color: #D9D9D9;
-  cursor: pointer;
 }
 
 .about .container .testimonials .head .dots span:first-child {
@@ -645,6 +645,87 @@ header .burger .links a:last-child h2 {
   gap: 1rem;
 }
 
+.about .container .testimonials .foot .arrows img {
+  cursor: pointer;
+}
+
+
+/* ############# */
+/* start footer */
+/* ############# */
+
+footer {
+  background-color: #283646;
+  color: white;
+  padding: 3rem 0;
+}
+
+footer .container .row {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .container .row .links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+footer .container .row .links a {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+footer .container .row .subscribe form {
+  position: relative;
+  margin-top: 1rem;
+}
+
+footer .container .row .subscribe form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1.1rem 1.5rem;
+  font-size: .8rem;
+  border-radius: 70px;
+  background-color: var(--secondary-color);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+footer .container .row .subscribe form input {
+  width: 350px;
+  padding: 1rem;
+  padding-right: 7rem;
+  font-size: .8rem;
+  border-radius: 70px;
+  background-color: #FFFFFF17;
+  color: #92989F;
+  border: 1px solid #92989F;
+  outline: none;
+}
+
+footer .container hr {
+  border-color: #92989F;
+}
+
+footer .container .row:last-child {
+  padding-top: 3rem;
+  color: #92989F;
+}
+
+footer .container .row .list a {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+footer .container .row .list a:first-child {
+  padding-left: 0;
+}
+
 @media (max-width: 900px) {
   header .burger {
     display: block;
@@ -674,6 +755,14 @@ header .burger .links a:last-child h2 {
   }
     .energy .container {
     flex-direction: column;
+  }
+  footer .container .row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  footer .container img {
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -712,5 +801,10 @@ header .burger .links a:last-child h2 {
   }
   .about .container .testimonials .foot .arrows img {
     width: 30px;
+  }
+  footer .container .row .list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 }
