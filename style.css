@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@font-face {
+  font-family: "Akazan";
+  src: url('Akazan-Regular.ttf');
+}
+
 :root {
   --primary-color: #0B9586;
   --secondary-color: #FFBB1C;
@@ -37,6 +42,10 @@
 a {
   text-decoration: none;
   color: inherit;
+}
+
+section {
+  padding: 3rem 0;
 }
 
 ul {
@@ -90,6 +99,7 @@ header .burger .links {
   top: 100%;
   right: 0;
   width: 200px;
+  z-index: 99;
 }
 
 header .burger:hover .links {
@@ -100,10 +110,6 @@ header .burger .links a:last-child h2 {
   background-color: red;
 }
 
-/* ############# */
-/* end header */
-/* ############# */
-
 
 /* ############# */
 /* start hero */
@@ -111,7 +117,7 @@ header .burger .links a:last-child h2 {
 
 .hero {
   position: relative;
-  height: 60vh;
+  /* height: 60vh; */
   color: white;
   background-image: url('images/hero.svg');
   background-size: cover;
@@ -170,6 +176,88 @@ header .burger .links a:last-child h2 {
   color: black;
 }
 
+/* ############# */
+/* start Installers */
+/* ############# */
+
+.installers .container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.installers .container .text {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.installers .container .text h2 {
+  font-weight: 500;
+  font-size: 3rem;
+}
+
+.installers .container .text p {
+  color: #475467;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.installers .container .text ol {
+  list-style: none;
+  counter-reset: list-counter;
+}
+
+.installers .container .text ol li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: .4rem 0;
+  position: relative;
+}
+
+.installers .container .text ol li::before {
+  font-family: "Akazan";
+  font-weight: 300;
+  content:'0 ' counter(list-counter) ' /';
+  color: var(--primary-color);
+  margin-right: .5rem;
+  counter-increment: list-counter;
+  font-size: 1.2rem;
+}
+
+.installers .container .img {
+  flex: 1;
+  position: relative;
+}
+
+.installers .container .img img {
+  width: 100%;
+}
+
+.installers .container .img .box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+  bottom: 15px;
+  left: -30px;
+  padding: 1.5rem;
+  background-color: var(--secondary-color);
+}
+
+.installers .container .img .box img {
+  width: 80px;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 900px) {
   header .burger {
     display: block;
@@ -181,6 +269,9 @@ header .burger .links a:last-child h2 {
   .hero .hero-text {
     width: 80%;
     /* padding: 0 1rem; */
+  }
+  .installers .container {
+    flex-direction: column;
   }
 }
 
@@ -196,5 +287,12 @@ header .burger .links a:last-child h2 {
   }
   .hero .hero-text .box {
     flex-direction: column;
+  }
+  .installers .container .img .box {
+    left: 15px;
+    opacity: .8;
+  }
+  .installers .container .text ol li {
+    font-size: 1rem;
   }
 }
