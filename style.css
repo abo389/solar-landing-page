@@ -509,10 +509,6 @@ header .burger .links a:last-child h2 {
 /* start values */
 /* ############# */
 
-.values {
-  background-color: #F5F5F5;
-}
-
 .values .container .title {
   text-align: center;
 }
@@ -562,6 +558,93 @@ header .burger .links a:last-child h2 {
   line-height: 1.5rem;
 }
 
+/* ############# */
+/* start about */
+/* ############# */
+
+.about .container {
+  display: flex;
+  gap: 3rem;
+}
+
+.about .container .title {
+  flex: 1;
+}
+
+.about .container .title h2 {
+  font-weight: bold;
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+
+.about .container .testimonials {
+  flex: 2;
+  background-color: #3CAB900D;
+  padding: 2rem;
+}
+
+.about .container .testimonials .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about .container .testimonials .head p {
+  color: var(--primary-color);
+}
+
+.about .container .testimonials .head .dots {
+  display: flex;
+  gap: .5rem;
+}
+
+.about .container .testimonials .head .dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  cursor: pointer;
+}
+
+.about .container .testimonials .head .dots span:first-child {
+  background-color: #6B6B6B;
+}
+
+.about .container .testimonials .body {
+  font-size: 1.7rem;
+  line-height: 2rem;
+  padding-top: 2rem;
+  width: 80%;
+}
+
+.about .container .testimonials .foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.about .container .testimonials .foot .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about .container .testimonials .foot .user h4 {
+  font-size: 1.2rem;
+  padding-bottom: .3rem;
+}
+
+.about .container .testimonials .foot .user p {
+  font-size: .9rem;
+  color: #475467;
+}
+
+.about .container .testimonials .foot .arrows {
+  display: flex;
+  gap: 1rem;
+}
+
 @media (max-width: 900px) {
   header .burger {
     display: block;
@@ -594,7 +677,7 @@ header .burger .links a:last-child h2 {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   html {
     font-size: 14px;
   }
@@ -619,5 +702,15 @@ header .burger .links a:last-child h2 {
   }
     .repairs .container .text h2 {
     font-size: 1.6rem;
+  }
+  .about .container {
+    flex-direction: column;
+  }
+  .about .container .testimonials .body {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  .about .container .testimonials .foot .arrows img {
+    width: 30px;
   }
 }
