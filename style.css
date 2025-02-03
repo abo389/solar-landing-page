@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-@font-face {
-  font-family: "Akazan";
-  src: url('Akazan-Regular.ttf');
-}
-
 :root {
   --primary-color: #0B9586;
   --secondary-color: #FFBB1C;
@@ -219,7 +214,6 @@ header .burger .links a:last-child h2 {
 }
 
 .installers .container .text ol li::before {
-  font-family: "Akazan";
   font-weight: 300;
   content:'0 ' counter(list-counter) ' /';
   color: var(--primary-color);
