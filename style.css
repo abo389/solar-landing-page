@@ -1,4 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter.woff2') format('woff2');
+  font-weight: 400; 
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Akazan";
+  src: url('./fonts/Akazan.woff2');
+}
 
 :root {
   --primary-color: #0B9586;
@@ -148,8 +167,35 @@ header .burger .links a:last-child h2 {
   width: 50%;
 }
 
+.hero .hero-text .pro {
+  display: flex;
+  align-items: center;
+}
+
 .hero .hero-text .pro progress {
   margin: 0 1rem;
+  height: 5px;
+  appearance: none;
+
+}
+
+  progress::-webkit-progress-bar,
+  progress::-moz-progress-bar,
+  progress::-ms-progress-bar,
+  progress::-o-progress-bar {
+    background-color: #575757;
+    border-radius: 10px;
+  }
+
+  progress::-webkit-progress-value {
+    background-color: white;
+    border-radius: 10px;
+  }
+
+.hero .hero-text .pro span {
+  font-family: "Akazan";
+  font-weight: 400;
+  letter-spacing: 3px;
 }
 
 .hero .hero-text h1 {
@@ -222,9 +268,10 @@ header .burger .links a:last-child h2 {
 }
 
 .installers .container .text ol li::before {
-  font-weight: 300;
+  font-family: "Akazan";
+  font-weight: 700;
   content:'0 ' counter(list-counter) ' /';
-  color: var(--primary-color);
+  color: #84BD3A;
   margin-right: .5rem;
   counter-increment: list-counter;
   font-size: 1.2rem;
