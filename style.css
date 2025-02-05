@@ -67,6 +67,10 @@ header .container {
   align-items: center;
 }
 
+header .container .logo img {
+  width: 10rem;
+}
+
 header .nav-links {
   display: flex;
 }
@@ -85,6 +89,10 @@ header .burger {
   width: 2.5rem;
   cursor: pointer;
   position: relative;
+}
+
+header .burger .icon img {
+  width: 2rem;
 }
 
 header .burger .links {
@@ -114,7 +122,7 @@ header .burger .links a:last-child h2 {
   position: relative;
   /* height: 60vh; */
   color: white;
-  background-image: url('images/hero.svg');
+  background-image: url('images/hero.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -257,7 +265,7 @@ header .burger .links a:last-child h2 {
 /* ############# */
 
 .power {
-  background-image: url('images/power.svg');
+  background-image: url('images/power.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -372,6 +380,7 @@ header .burger .links a:last-child h2 {
 
 .solar .container .card-container .card .text a img {
   margin-left: .5rem;
+  width: 1rem;
 }
 
 /* ############# */
@@ -379,7 +388,7 @@ header .burger .links a:last-child h2 {
 /* ############# */
 
 .repairs {
-  background-image: url('images/repairs.svg');
+  background-image: url('images/repairs.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -441,6 +450,10 @@ header .burger .links a:last-child h2 {
   align-self: flex-start;
 }
 
+.energy .container .title .icon img {
+  width: 5rem;
+}
+
 .energy .container .title h2 {
   font-weight: bold;
   font-size: 2rem;
@@ -498,6 +511,7 @@ header .burger .links a:last-child h2 {
 
 .energy .container .card-container .card a img {
   margin-left: .5rem;
+  width: 1rem;
 }
 
 /* ############# */
@@ -566,6 +580,10 @@ header .burger .links a:last-child h2 {
   flex: 1;
 }
 
+.about .container .title img {
+  width: 5rem;
+}
+
 .about .container .title h2 {
   font-weight: bold;
   font-size: 3rem;
@@ -624,6 +642,10 @@ header .burger .links a:last-child h2 {
   gap: 1rem;
 }
 
+.about .container .testimonials .foot .user img {
+  width: 5rem;
+}
+
 .about .container .testimonials .foot .user h4 {
   font-size: 1.2rem;
   padding-bottom: .3rem;
@@ -641,6 +663,7 @@ header .burger .links a:last-child h2 {
 
 .about .container .testimonials .foot .arrows img {
   cursor: pointer;
+  width: 4rem;
 }
 
 
@@ -652,6 +675,10 @@ footer {
   background-color: #283646;
   color: white;
   padding: 3rem 0;
+}
+
+footer .container img {
+  width: 10rem;
 }
 
 footer .container .row {
@@ -713,7 +740,12 @@ footer .container .row:last-child {
 
 footer .container .row .list a {
   display: inline-block;
-  padding: 0 1rem;
+  padding: 0 .5rem;
+}
+
+footer .container .row .list a:not(:last-child)::after {
+  content: "|";
+  padding-left: 1rem;
 }
 
 footer .container .row .list a:first-child {
@@ -800,5 +832,11 @@ footer .container .row .list a:first-child {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+  }
+  footer .container .row .list a {
+    padding-left: 0;
+  }
+  footer .container .row .list a::after {
+    display: none;
   }
 }
